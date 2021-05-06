@@ -5,7 +5,7 @@
 <html lang="en">
 
 <body>
-	<jsp:include page="/include/header.jsp"/>
+	<jsp:include page="include/header.jsp"/>
 
 	<div class="jumbotron jumbotron-fluid">
 		<img src="assets/img/미세먼지2.jpg"
@@ -93,7 +93,7 @@
 	<!-- End About Section --> </main>
 	<!-- End #main -->
 
-<jsp:include page="/include/footer.jsp"/>
+<jsp:include page="include/footer.jsp"/>
 
 	<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 

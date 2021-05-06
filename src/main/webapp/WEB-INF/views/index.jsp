@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
-<jsp:include page="/include/header.jsp"/>
+<jsp:include page="include/header.jsp"/>
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="container text-center text-md-left" data-aos="fade-up">
@@ -265,7 +265,7 @@
 
   </main><!-- End #main -->
 
-<jsp:include page="/include/footer.jsp"/>
+<jsp:include page="include/footer.jsp"/>
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
 

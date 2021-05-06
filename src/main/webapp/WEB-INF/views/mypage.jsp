@@ -39,7 +39,7 @@
 </c:if>
 <c:if test="${userinfo ne null}">
 <body>
-  <jsp:include page="/include/header.jsp"/>
+  <jsp:include page="include/header.jsp"/>
   <div class="jumbotron jumbotron-fluid">
       <img src="assets/img/house.jpeg" class="jumbotron__background">
     <div class="container text-white text-center">
@@ -82,7 +82,7 @@
     
   </main><!-- End #main -->
 
-<jsp:include page="/include/footer.jsp"/>
+<jsp:include page="include/footer.jsp"/>
 
   <!-- Update user info Modal -->
   <div class="modal" id="updateModal">
