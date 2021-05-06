@@ -1,8 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%
-String root = request.getContextPath();
-%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<c:set var="root" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -17,10 +16,11 @@ String root = request.getContextPath();
 <body>
 <div class="container">
   <div class="jumbotron">
+  	<%@ include file="/WEB-INF/views/include/header.jsp" %>
     <h1>처리중 에러가 발생했습니다.</h1>      
-    <p><%= request.getAttribute("msg") %></p>
+    <p>${msg}</p>
   </div>  
-  <p><a href="<%= root %>">메인으로 가기</a></p>
+  <p><a href="${root}">메인으로 가기</a></p>
 </div>
 </body>
 </html>

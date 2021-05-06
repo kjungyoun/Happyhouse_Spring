@@ -11,13 +11,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.springframework.stereotype.Controller;
+
 import com.ssafy.happyhouse.model.MemberDto;
 import com.ssafy.happyhouse.model.PageBean;
 import com.ssafy.happyhouse.model.PageBean2;
 import com.ssafy.happyhouse.model.service.HouseServiceImpl;
 import com.ssafy.happyhouse.model.service.MemberServiceImpl;
 
-@WebServlet("/main")
+@Controller
 public class MainController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

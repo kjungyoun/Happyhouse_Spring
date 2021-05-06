@@ -3,6 +3,8 @@ package com.ssafy.happyhouse.model.service;
 import java.sql.Connection;
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.ssafy.happyhouse.model.MemberDto;
 import com.ssafy.happyhouse.model.MemberException;
 import com.ssafy.happyhouse.model.PageBean2;
@@ -10,6 +12,7 @@ import com.ssafy.happyhouse.model.dao.MemberDaoImpl;
 import com.ssafy.happyhouse.util.DBUtil;
 import com.ssafy.happyhouse.util.PageUtility;
 
+@Service
 public class MemberServiceImpl implements MemberService {
 
 	private static MemberService memberService;

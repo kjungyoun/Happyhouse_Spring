@@ -4,9 +4,12 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
 
+import org.apache.ibatis.annotations.Mapper;
+
 import com.ssafy.happyhouse.model.MemberDto;
 import com.ssafy.happyhouse.model.PageBean2;
 
+@Mapper
 public interface MemberDao {
 
 //	회원가입
