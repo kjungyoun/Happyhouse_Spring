@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.ssafy.happyhouse.model.MemberDto;
-import com.ssafy.happyhouse.model.PageBean2;
+import com.ssafy.happyhouse.model.PageBean;
 
 public interface MemberService {
 
@@ -24,5 +24,6 @@ public interface MemberService {
 	void deleteMember(String userid)throws Exception;
 	
 //  회원 전체
-	List<MemberDto> searchAll(PageBean2 bean)throws Exception;
+	List<MemberDto> searchAll(PageBean bean)throws Exception;
+
 }

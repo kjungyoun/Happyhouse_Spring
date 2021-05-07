@@ -32,7 +32,7 @@
 		where userid = #{userid}
 	</delete>
 
-	<select id="searchAll" parameterType="pagebean" resultType="memberDto">
+	<select id="searchAll" parameterType="pageBean" resultType="memberDto">
 		select userid, username, email
 		from member
 		order by userid desc;

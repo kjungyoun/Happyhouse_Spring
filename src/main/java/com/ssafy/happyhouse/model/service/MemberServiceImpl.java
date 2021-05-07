@@ -12,8 +12,8 @@ import org.springframework.stereotype.Service;
 
 import com.ssafy.happyhouse.model.MemberDto;
 import com.ssafy.happyhouse.model.MemberException;
-import com.ssafy.happyhouse.model.PageBean2;
-import com.ssafy.happyhouse.model.mapper.MemberDaoImpl;
+import com.ssafy.happyhouse.model.PageBean;
+import com.ssafy.happyhouse.model.mapper.MemberMapper;
 import com.ssafy.happyhouse.util.PageUtility;
 
 @Service
@@ -72,7 +72,7 @@ public class MemberServiceImpl implements MemberService {
 	}
 
 	@Override
-	public List<MemberDto> searchAll(PageBean2 bean) throws Exception {
+	public List<MemberDto> searchAll(PageBean bean) throws Exception {
 		return sqlSession.getMapper(MemberMapper.class).searchAll();
 //		Connection conn = null;
 //		try {

@@ -11,13 +11,13 @@ import com.ssafy.happyhouse.model.MemberDto;
 import com.ssafy.happyhouse.model.PageBean2;
 import com.ssafy.happyhouse.util.DBUtil;
 
-public class MemberDaoImpl implements MemberDao {
+public class MemberDaoImpl implements MemberMapper {
 
-	private static MemberDao memberDao;
+	private static MemberMapper memberDao;
 	
 	private MemberDaoImpl() {}
 	
-	public static MemberDao getMemberDao() {
+	public static MemberMapper getMemberDao() {
 		if(memberDao == null)
 			memberDao = new MemberDaoImpl();
 		return memberDao;
