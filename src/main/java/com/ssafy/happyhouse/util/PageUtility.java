@@ -19,22 +19,19 @@ public class PageUtility {
     int totalpagecount=0;				//총 페이지 수
     int displayrowcount=0;				//한 페이지당 보여줄 개수
     int pagePercount = 5;				//페이지 링크 거는 개수      << < 1 2 3 4 5 > >>
-    String imagepath;
     String search;
     /**
      * 현재페이지와 경로 한번에 보여줄 열의 갯수를 세팅하는 생성자
      * @param displayrowcount 한 페이지에 보여줄 게시글 수
      * @param totalrowcount   조회해온 데이터의 전체 row수
      * @param currentpagecount 현재 페이지 
-     * @param imagepath        이미지 경로 
      * @exception java.lang.Exception
      */
-    public PageUtility(int displayrowcount, int totalrowcount, int currentpagecount, String imagepath)
+    public PageUtility(int displayrowcount, int totalrowcount, int currentpagecount)
     {
         this.displayrowcount = displayrowcount;
         this.totalrowcount = totalrowcount;
         this.currentpagecount = currentpagecount;
-        this.imagepath = imagepath	;
         this.totalpagecount=totalrowcount/displayrowcount;
         if(totalrowcount%displayrowcount!=0){
           this.totalpagecount++;

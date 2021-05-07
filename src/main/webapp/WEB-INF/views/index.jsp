@@ -37,8 +37,8 @@
 
             <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
               <i class="bx bx-cube-alt"></i>
-              <h4>JSP와 MySQL</h4>
-              <p>JSP와 MySQL을 사용한 웹 백엔드 프로젝트입니다.</p>
+              <h4>SpringBoot</h4>
+              <p>SpringBoot를 이용한 웹페이지 입니다.</p>
             </div>
           </div>
         </div>
@@ -125,10 +125,9 @@
             <div class="tab-content">
               <div class="tab-pane active show" id="map">
 
-                <form method="get" action="${root}/main">
-                <input type="hidden" name="action" value="searchAll">
+                <form method="get" action="${root}/house/searchSelect">
                   <div class="form-group d-inline-block">
-                    <select class="form-control" id="sel1"name="key1">
+                    <select class="form-control" id="sel1" name="key1">
                       <option disabled selected value="all">시/도</option>
                       <option >서울시</option>
                       <option>경기도</option>
@@ -136,7 +135,7 @@
                     </select>
                   </div>
                   <div class="form-group d-inline-block">
-                    <select class="form-control" id="sel2">
+                    <select class="form-control" id="sel2" name>
                       <option disabled selected>시/구/군</option>
                       <option>종로구</option>
                       <option>용산구</option>
@@ -161,8 +160,7 @@
                   width="600" height="450" style="border: 0;"> </iframe>
               </div>
               <div class="tab-pane" id="detail">
-              <form method="get" action="${root}/main">
-              <input type="hidden" name="action" value="search">
+              <form method="get" action="${root}/house/search">
               <div class="form-group d-inline-block">
                     <button type="submit" class="btn btn-primary mb-1">상세 검색하러 가기</button>
                   </div>
@@ -173,8 +171,7 @@
               </div>
               <div class="tab-pane" id="srcdong">
                 <div class="container mt-3">
-                  <form method="post" action="${root}/main">
-                  <input type="hidden" name="action" value="search">
+                  <form method="get" action="${root}/house/search">
                   <input type="hidden" name="key" value="dong">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.5607561223096!2d126.74783201543875!3d37.423855740043976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b7b13aab9ed93%3A0x3abb0d0829c86fdb!2z7Iqk7YOA67KF7IqkIOyduOyynOyEnOywveygkA!5e0!3m2!1sko!2skr!4v1615476247568!5m2!1sko!2skr"
@@ -190,8 +187,7 @@
               </div>
               <div class="tab-pane" id="srcapt">
                 <div class="container mt-3">
-                <form method="post" action="${root}/main">
-                <input type="hidden" name="action" value="search">
+                <form method="get" action="${root}/house/search">
                 <input type="hidden" name="key" value="AptName">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3168.5607561223096!2d126.74783201543875!3d37.423855740043976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b7b13aab9ed93%3A0x3abb0d0829c86fdb!2z7Iqk7YOA67KF7IqkIOyduOyynOyEnOywveygkA!5e0!3m2!1sko!2skr!4v1615476247568!5m2!1sko!2skr"

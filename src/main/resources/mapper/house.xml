@@ -2,14 +2,16 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.ssafy.guestbook.model.dao.HouseDao">
+<mapper namespace="com.ssafy.guestbook.model.mapper.HouseMapper">
 
+	<!-- join을 위한 baseAddress resultMap -->
 	<resultMap type="baseAddr" id="baseMap">
 		<result property="city" column="city"/>
 		<result property="gugun" column="gugun"/>
 		<result property="dongcode" column="dongcode"/>
 	</resultMap>
 	
+	<!-- join을 위한 houseDto resultMap -->
 	<resultMap type="houseDto" id="dealMap">
 		<result property="no" column="no"/>
 		<result property="dong" column="dong"/>
@@ -27,6 +29,7 @@
 		<collection property="base" ofType="baseAddr" resultMap="baseMap"></collection>
 	</resultMap>
 	
+	<!-- 검색어로 집 거래 정보 리스트 구하기 -->
 	<select id="searchHouse" parameterType="pageBean" resultMap="dealMap">
 		select * 
 		from housedeal a
@@ -40,8 +43,16 @@
 		order by AptName desc limit #{startNo}, #{interval}
 	</select>
 	
-	<select id="searchCity" parameterType="int" resultType="houseDto">
-		select distinct city, gugun, from baseaddress
+	<!-- 총 데이터 개수 구하기 -->
+	<select id="totalCount" parameterType="pageBean" resultType="int">
+		select count(*) as cnt form housedeal
+		<where>
+			<if test="key != 'all' and key != null and word != null and word != ''">
+				${key} like concat('%',#{word},'%')
+			</if>
+		</where>
 	</select>
+	
+	<!-- BaseAddress의 전체 목록을 구하기 위한  -->
 
 </mapper>

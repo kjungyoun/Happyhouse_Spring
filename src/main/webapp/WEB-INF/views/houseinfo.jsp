@@ -2,13 +2,6 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="root"	value='${pageContext.request.contextPath}'/> 
-<c:if test="${userinfo eq null}">
-	<script>
-		alert("로그인이 필요한 페이지입니다.\n로그인 페이지로 이동합니다.");
-		location.href = "main";
-	</script>
-</c:if>
-<c:if test="${userinfo ne null}">
 <!DOCTYPE html>
 <html lang="en">
 
@@ -60,9 +53,8 @@
 		function pagelist(cpage){
 			//input 양식의 hidden으로 선언된 page에 요청된 페이지 정보 셋팅 
 			$("#pageNo").val(cpage);
-			$("#action").val("search");
 			var frm = $("#form");
-			frm.attr('action',"${root}/main");
+			frm.attr('action',"${root}/house/search");
 			frm.submit();
 		}
 	  </script>
@@ -99,7 +91,7 @@
 							<div class="media margin-clear">
 								<div class="media-body">
 									<h4>
-										<a href="${root}/main?action=search&key=AptName&word=${house.aptName}">${house.aptName} 아파트</a>
+										<a href="${root}/house/search?key=AptName&word=${house.aptName}">${house.aptName} 아파트</a>
 									</h4>
 									<h6 class="media-heading" id="">지역 정보 : ${house.city} ${house.gugun} ${house.dong}</h6>
 									<h6 class="media-heading" id="">아파트 지번 : ${house.jibun}</h6>
@@ -114,7 +106,6 @@
 							<hr>
 						</c:forEach>
 						</div>
-					<form id="form">
 					<div>${bean.pageLink}</div>
 					</ul>
 					</c:when>
@@ -127,7 +118,7 @@
 							<div class="media margin-clear">
 								<div class="media-body">
 									<h4>
-										<a href="${root}/main?action=search&key=dong&word=${house.dong}">${house.dong }</a>
+										<a href="${root}/house/search?key=dong&word=${house.dong}">${house.dong }</a>
 									</h4>
 									<h6 class="media-heading" id="">지역 정보 : ${house.city} ${house.gugun} ${house.dong}</h6>
 									<h6 class="media-heading" id="">아파트 지번 : ${house.jibun}</h6>
@@ -142,15 +133,14 @@
 							<hr>
 						</c:forEach>
 						</div>
-					<form id="form">
 					<div>${bean.pageLink}</div>
 					</ul>
 					</c:otherwise>
 			</c:choose>
 				</div>
 				<div class="col-lg-7 ml-auto" data-aos="fade-left">
-						<input type="hidden" name="action" id="action">
-						<input type='hidden' name='pageNo' id="pageNo">
+					<form id="form">
+						<input type='hidden' name='pageNo' id="pageNo"/>
 						<div class="form-group d-inline-block">
 						  <select class="form-control" id="key" name="key">
 							<option value="all">전체 검색</option>
@@ -176,7 +166,6 @@
 	</section>
 	<!-- End About Section --> </main>
 	<!-- End #main -->
-</c:if>
 <jsp:include page="include/footer.jsp"/>
 
 	<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
