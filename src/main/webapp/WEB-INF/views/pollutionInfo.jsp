@@ -8,7 +8,7 @@
 	<jsp:include page="include/header.jsp"/>
 
 	<div class="jumbotron jumbotron-fluid">
-		<img src="assets/img/미세먼지2.jpg"
+		<img src="/assets/img/미세먼지2.jpg"
 			class="jumbotron__background"> 
 		<div class="container text-white text-center">
 			<h4 class="display-4">관심 지역의 대기오염 정보를 확인하세요.</h4>
@@ -98,18 +98,18 @@
 	<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
 	<!-- Vendor JS Files -->
-	<script src="assets/vendor/jquery/jquery.min.js"></script>
-	<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-	<script src="assets/vendor/php-email-form/validate.js"></script>
-	<script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-	<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-	<script src="assets/vendor/venobox/venobox.min.js"></script>
-	<script src="assets/vendor/aos/aos.js"></script>
+	<script src="/assets/vendor/jquery/jquery.min.js"></script>
+	<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+	<script src="/assets/vendor/php-email-form/validate.js"></script>
+	<script src="/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+	<script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+	<script src="/assets/vendor/venobox/venobox.min.js"></script>
+	<script src="/assets/vendor/aos/aos.js"></script>
 
 	<!-- Template Main JS File -->
-	<script src="assets/js/main.js"></script>
-	<script src="assets/js/user.js"></script>
+	<script src="/assets/js/main.js"></script>
+	<script src="/assets/js/user.js"></script>
 
 </body>
 

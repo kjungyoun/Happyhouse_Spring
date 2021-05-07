@@ -1,6 +1,8 @@
 package com.ssafy.happyhouse.model.service;
 
 import java.util.List;
+import java.util.Map;
+
 import com.ssafy.happyhouse.model.MemberDto;
 import com.ssafy.happyhouse.model.PageBean;
 
@@ -10,7 +12,7 @@ public interface MemberService {
 	void registerMember(MemberDto memberDto)throws Exception;
 	
 //	로그인
-	MemberDto login(String userid, String userpwd) throws Exception;
+	MemberDto login(Map<String,String> map) throws Exception;
 	
 //	회원정보 수정을 위한 회원의 모든 정보 얻기
 	MemberDto getMember(String userid)throws Exception;

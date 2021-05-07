@@ -13,8 +13,8 @@
 <!-- Favicons -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link href="assets/img/favicon.png" rel="icon">
-<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+<link href="/assets/img/favicon.png" rel="icon">
+<link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 <link rel="stylesheet"
 	href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
 
@@ -24,22 +24,22 @@
 	rel="stylesheet">
 
 <!-- Vendor CSS Files -->
-<link href="assets/vendor/bootstrap/css/bootstrap.min.css"
+<link href="/assets/vendor/bootstrap/css/bootstrap.min.css"
 	rel="stylesheet">
-<link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-<link href="assets/vendor/boxicons/css/boxicons.min.css"
+<link href="/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+<link href="/assets/vendor/boxicons/css/boxicons.min.css"
 	rel="stylesheet">
-<link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css"
+<link href="/assets/vendor/owl.carousel/assets/owl.carousel.min.css"
 	rel="stylesheet">
-<link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-<link href="assets/vendor/aos/aos.css" rel="stylesheet">
+<link href="/assets/vendor/venobox/venobox.css" rel="stylesheet">
+<link href="/assets/vendor/aos/aos.css" rel="stylesheet">
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <!-- Template Main CSS File -->
-<link href="assets/css/style.css" rel="stylesheet">
+<link href="/assets/css/style.css" rel="stylesheet">
 <script type="text/javascript">
 		$(function() {
 			//검색 버튼에 이벤트 연결
@@ -64,7 +64,7 @@
 <jsp:include page="include/header.jsp"/>
 
 	<div class="jumbotron jumbotron-fluid">
-		 <img src="assets/img/미세먼지2.jpg"
+		 <img src="/assets/img/미세먼지2.jpg"
 			class="jumbotron__background"> 
 		<div class="container text-white text-center">
 			<h4 class="display-4">주변 지역의 아파트 거래 정보를 확인하세요</h4>
@@ -171,18 +171,18 @@
 	<a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
 	<!-- Vendor JS Files -->
-	<script src="assets/vendor/jquery/jquery.min.js"></script>
-	<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-	<script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-	<script src="assets/vendor/php-email-form/validate.js"></script>
-	<script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-	<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-	<script src="assets/vendor/venobox/venobox.min.js"></script>
-	<script src="assets/vendor/aos/aos.js"></script>
+	<script src="/assets/vendor/jquery/jquery.min.js"></script>
+	<script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+	<script src="/assets/vendor/php-email-form/validate.js"></script>
+	<script src="/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+	<script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+	<script src="/assets/vendor/venobox/venobox.min.js"></script>
+	<script src="/assets/vendor/aos/aos.js"></script>
 
 	<!-- Template Main JS File -->
-	<script src="assets/js/main.js"></script>
-	<script src="assets/js/user.js"></script>
+	<script src="/assets/js/main.js"></script>
+	<script src="/assets/js/user.js"></script>
 
 </body>
 

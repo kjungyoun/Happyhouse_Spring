@@ -17,4 +17,9 @@ public class HomeController {
 		return "index";
 	}
 	
+	@RequestMapping(value = "/notice", method = RequestMethod.GET)
+	public String notice() {
+		return "notice";
+	}
+	
 }

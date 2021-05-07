@@ -44,7 +44,6 @@
           <article class="card-body mx-auto" style="max-width: 400px;">
             <h4 class="card-title text-center mt-3">Create Account</h4>
             <form id="signupform" action="" method="post">
-            <input type="hidden" name="action" value="register">
               <div class="form-group input-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-user"></i> </span>
@@ -94,7 +93,6 @@
           <article class="card-body mx-auto" style="max-width: 400px;">
             <h4 class="card-title text-center mt-3">Login</h4>
             <form id="loginform" action="" method="post">
-            <input type="hidden" name="action" value="login">
               <div class="form-group input-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text"> <i class="fa fa-user"></i> </span>

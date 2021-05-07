@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.ssafy.guestbook.model.mapper.MemberMapper">
+<mapper namespace="com.ssafy.happyhouse.model.mapper.MemberMapper">
 
 	<insert id="registerMember" parameterType="memberDto">
 		insert into member (userid, userpwd, username, email)
@@ -10,7 +10,7 @@
 	</insert>
 
 	<select id="login" parameterType="map" resultType="memberDto">
-		select username, email
+		select *
 		from member
 		where userid = #{userid} and userpwd = #{userpwd}
 	</select>
@@ -35,11 +35,21 @@
 	<select id="searchAll" parameterType="pageBean" resultType="memberDto">
 		select userid, username, email
 		from member
-		order by userid desc;
+		<where>
+			<if test="key != null and key != all and word != null and word != ''">
+				${key} like concat('%',#{word},'%')
+			</if>
+		</where>
+		order by userid desc limit #{startNo}, #{interval};
 	</select>
 	
-	<select id="totalCount"   parameterType="pageBean"  resultType="member"  >
+	<select id="totalCount"   parameterType="pageBean"  resultType="int"  >
 		select count(*) from member
+		<where>
+			<if test="key != null and key != all and word != null and word != ''">
+				${key} like concat('%',#{word},'%')
+			</if>
+		</where>
 	</select>
 	
 </mapper>

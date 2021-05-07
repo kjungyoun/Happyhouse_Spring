@@ -22,7 +22,7 @@
 
         <div class="row">
           <div class="col-xl-6 col-lg-7" data-aos="fade-right">
-            <img src="assets/img/about-bg.jpeg" class="img-fluid" alt="">
+            <img src="/assets/img/about-bg.jpeg" class="img-fluid" alt="">
           </div>
           <div class="col-xl-6 col-lg-5 pt-5 pt-lg-0">
             <h3 data-aos="fade-up">About Happy House</h3>
@@ -223,7 +223,7 @@
           </div>
           <div class="col-xl-3 col-lg-3 col-md-3" data-aos="fade-up">
             <div class="member">
-              <img src="assets/img/team/jyyy.jpg" class="img-fluid" alt="">
+              <img src="/assets/img/team/jyyy.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>김정윤</h4>
@@ -238,7 +238,7 @@
           
           <div class="col-xl-3 col-lg-3 col-md-3" data-aos="fade-up" data-aos-delay="100">
             <div class="member">
-              <img src="assets/img/team/seoyoung.jpg" class="img-fluid" alt="">
+              <img src="/assets/img/team/seoyoung.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>이서영</h4>
@@ -266,18 +266,18 @@
 
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/venobox/venobox.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="/assets/vendor/php-email-form/validate.js"></script>
+  <script src="/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/assets/vendor/venobox/venobox.min.js"></script>
+  <script src="/assets/vendor/aos/aos.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/user.js"></script>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/user.js"></script>
 
 </body>
 
