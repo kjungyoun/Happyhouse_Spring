@@ -65,15 +65,16 @@ public class MemberController {
 	
 	// modify
 	@RequestMapping(value = "/modify", method = RequestMethod.POST)
-	public String modifyMember(@RequestParam String userid, String userpwd, String username, String email, Model model) throws Exception {
+	public String modifyMember(@RequestParam String userid, String userpwd, String username, String email, Model model, HttpSession session) throws Exception {
 		MemberDto memberDto = new MemberDto(userid, userpwd, username, email);
 		memberService.modifyMember(memberDto);
-		return "index";
+		session.invalidate();
+		return "redirect:/";
 	}
 	
 	
 	// delete
-	@RequestMapping(value = "/delete", method = RequestMethod.POST)
+	@RequestMapping(value = "/delete", method = RequestMethod.GET)
 	public String deleteMember(@RequestParam String userid, HttpSession session) throws Exception {
 		memberService.deleteMember(userid);
 		return "redirect:/";
