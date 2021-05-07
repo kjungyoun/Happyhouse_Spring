@@ -65,6 +65,9 @@ public class PageUtility {
         System.out.println("beforetenpage:"+beforetenpage);
         System.out.println("nexttenpage:"+nexttenpage);
         
+        sb.append("<nav aria-label=\"Page navigation example\">");
+        sb.append("<ul class=\"pagination\">");
+        
         
         if(beforetenpage<1)     beforetenpage=1;
         if(nexttenpage>totalpagecount)
@@ -73,37 +76,49 @@ public class PageUtility {
             lastpagecount = totalpagecount+1;
 		
         if(firstpagecount>pagePercount)
-            sb.append(" <a href='javascript:pagelist("+beforetenpage+")'><img src=\""+imagepath+"btn_first.gif\" border='0'  hspace='3' align='absmiddle'></a>&nbsp;&nbsp;");
+        	sb.append("<li class=\"page-item\"><a class=\"page-link\" href='javascript:pagelist("+beforetenpage+")'>First</a></li>");
         else
-            sb.append("<img src=\""+imagepath+"btn_first.gif\" border='0'  align=absmiddle>&nbsp;&nbsp;");
+            sb.append(" <li class=\"page-item disabled\"><a class=\"page-link\" href=\"#\" tabindex=\"-1\">First</a></li>");
 
         if(((currentpagecount-1)/pagePercount*pagePercount)+1>beforetenpage)
-            sb.append("<a href='javascript:pagelist("+ beforetenpage+")'><img src=\""+imagepath+"btn_prev.gif\" border='0' hspace='3' align=absmiddle></a>&nbsp;&nbsp;");
+        	sb.append("<li class=\"page-item\"><a class=\"page-link\" href='javascript:pagelist("+beforetenpage+")'>Previous</a></li>");
         else
-            sb.append("<img src=\""+imagepath+"btn_prev.gif\" border='0'   align=absmiddle>&nbsp;&nbsp;");
+        	sb.append(" <li class=\"page-item disabled\"><a class=\"page-link\" href=\"#\" tabindex=\"-1\">Previous</a></li>");
 
         for (int i = firstpagecount; i < lastpagecount; i++)
         {
             if(i<=totalpagecount)
             {
-                if (i == currentpagecount)
-                    sb.append("<b>" + i + "</b>");
+                if (i == currentpagecount) {
+                	sb.append("<li class=\"page-item active\">");
+                	sb.append("<a class=\"page-link\" href='javascript:pagelist("+i+")'>"+ i +"<span class=\"sr-only\">(current)</span></a>");
+                	sb.append("</li>");
+                	
+                }
                 else
-                    sb.append("<a href='javascript:pagelist("+i+")'>" + i + "</a>");
-                if( i !=lastpagecount-1)
-                    sb.append(" . ");
+                	sb.append("<li class=\"page-item\"><a class=\"page-link\" href='javascript:pagelist("+i+")'>"+ i + "</a></li>");
             }
         }
 
         if(nexttenpage<((totalpagecount-1)/pagePercount+1)*pagePercount)
-            sb.append("&nbsp;&nbsp;<a href='javascript:pagelist("+ (nexttenpage)+ ")'><img src=\""+imagepath+"btn_next.gif\" border='0' hspace='3' align=absmiddle></a>");
-        else
-            sb.append("&nbsp;&nbsp;<img src=\""+imagepath+"btn_next.gif\" border='0' hspace='3' align=absmiddle>");
+        	sb.append("<li class=\"page-item\"><a class=\"page-link\" href='javascript:pagelist("+ (nexttenpage)+ ")'>Next</a></li>");
+        else {
+            sb.append("<li class=\"page-item disabled\">");
+            sb.append("<span class=\"page-link\">Next</span>");
+            sb.append("</li>");
+        }
 
         if((((currentpagecount-1)/pagePercount)+1)*pagePercount < nexttenpage)
-            sb.append("&nbsp;&nbsp;<a href='javascript:pagelist("+ (nexttenpage)+")'><img src=\""+imagepath+"btn_end.gif\" border='0' align=absmiddle></a>");
-        else
-            sb.append("&nbsp;&nbsp;<img src=\""+imagepath+"btn_end.gif\" border='0' align=absmiddle>");
+        	sb.append("<li class=\"page-item\"><a class=\"page-link\" href='javascript:pagelist("+ (nexttenpage)+ ")'>End</a></li>");
+        else {
+            sb.append("<li class=\"page-item disabled\">");
+            sb.append("<span class=\"page-link\">End</span>");
+            sb.append("</li>");
+        }
+        
+        sb.append("</ul>");
+        sb.append("</nav>");
+        		
         return sb.toString();
     }
     public String getTotalPageCount() {       return String.valueOf(totalpagecount);

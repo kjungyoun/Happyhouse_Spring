@@ -4,5 +4,44 @@
 
 <mapper namespace="com.ssafy.guestbook.model.dao.HouseDao">
 
+	<resultMap type="baseAddr" id="baseMap">
+		<result property="city" column="city"/>
+		<result property="gugun" column="gugun"/>
+		<result property="dongcode" column="dongcode"/>
+	</resultMap>
+	
+	<resultMap type="houseDto" id="dealMap">
+		<result property="no" column="no"/>
+		<result property="dong" column="dong"/>
+		<result property="aptName" column="AptName"/>
+		<result property="code" column="code"/>
+		<result property="dealAmount" column="dealAmount"/>
+		<result property="buildYear" column="buildYear"/>
+		<result property="dealYear" column="dealYear"/>
+		<result property="dealMonth" column="dealMonth"/>
+		<result property="dealDay" column="dealDay"/>
+		<result property="area" column="area"/>
+		<result property="floor" column="floor"/>
+		<result property="jibun" column="jibun"/>
+		
+		<collection property="base" ofType="baseAddr" resultMap="baseMap"></collection>
+	</resultMap>
+	
+	<select id="searchHouse" parameterType="pageBean" resultMap="dealMap">
+		select * 
+		from housedeal a
+		left join (select distinct city, dongcode, gugun from baseaddress) b
+		on a.code = b.dongcode
+		<where>
+			<if test="key != null and key != 'all' and word != null and word != ''">
+					${key} like concat('%',#{word},'%'}
+			</if>
+		</where>
+		order by AptName desc limit #{startNo}, #{interval}
+	</select>
+	
+	<select id="searchCity" parameterType="int" resultType="houseDto">
+		select distinct city, gugun, from baseaddress
+	</select>
 
 </mapper>

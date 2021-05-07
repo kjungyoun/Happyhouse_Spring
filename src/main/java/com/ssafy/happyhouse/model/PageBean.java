@@ -11,7 +11,7 @@ public class PageBean {
 	/** 한 페이지에 보여주 content 개수 */
 	private int interval = 2;
 	
-	private int startNo=1;
+	private int startNo=0;
 	private String pageLink;
 	public PageBean() {	}
 	public PageBean(String key, String word, int pageNo) {
@@ -25,7 +25,7 @@ public class PageBean {
 		setPageNo(pageNo);
 	}
 	public int getStartNo() {
-		return (pageNo -1)*interval+1;
+		return (pageNo -1)*interval;
 	}
 	public void setStartNo(int startNo) {
 		this.startNo = startNo;

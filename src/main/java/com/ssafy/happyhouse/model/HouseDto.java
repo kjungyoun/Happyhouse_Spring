@@ -13,19 +13,14 @@ public class HouseDto {
 	private Double area;
 	private int floor;
 	private String jibun;
-	private String city;
-	private String gugun;
-	public String getCity() {
-		return city;
+	private BaseAddr base;
+	
+	
+	public BaseAddr getBase() {
+		return base;
 	}
-	public void setCity(String city) {
-		this.city = city;
-	}
-	public String getGugun() {
-		return gugun;
-	}
-	public void setGugun(String gugun) {
-		this.gugun = gugun;
+	public void setBase(BaseAddr base) {
+		this.base = base;
 	}
 	public int getNo() {
 		return no;
@@ -102,7 +97,7 @@ public class HouseDto {
 	
 	
 	public HouseDto(int no, String dong, String aptName, int code, String dealAmount, int buildYear, int dealYear,
-			int dealMonth, int dealDay, Double area, int floor, String jubun, String city, String gugun) {
+			int dealMonth, int dealDay, Double area, int floor, String jibun, BaseAddr base) {
 		super();
 		this.no = no;
 		this.dong = dong;
@@ -115,9 +110,9 @@ public class HouseDto {
 		this.dealDay = dealDay;
 		this.area = area;
 		this.floor = floor;
-		this.jibun = jubun;
-		this.city = city;
-		this.gugun = gugun;
+		this.jibun = jibun;
+		this.base = base;
 	}
+	
 	public HouseDto() {};
 }

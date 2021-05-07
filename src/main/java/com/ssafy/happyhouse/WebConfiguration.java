@@ -15,8 +15,8 @@ public class WebConfiguration extends WebMvcConfigurerAdapter {
 
 	@Override
 	public void addInterceptors(InterceptorRegistry registry) {
-		registry.addInterceptor(confirmInterceptor).addPathPatterns("/userAdmin");
-		registry.addInterceptor(confirmInterceptor).addPathPatterns("/mypage");
+		registry.addInterceptor(confirmInterceptor).addPathPatterns("/user/userAdmin");
+		registry.addInterceptor(confirmInterceptor).addPathPatterns("/user/mypage");
 	}
 	
 	
