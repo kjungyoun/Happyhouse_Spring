@@ -1,4 +1,4 @@
-package com.ssafy.happyhouse.model.dao;
+package com.ssafy.happyhouse.model.mapper;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

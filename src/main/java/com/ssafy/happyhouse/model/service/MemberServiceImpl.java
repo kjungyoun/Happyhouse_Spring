@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 import com.ssafy.happyhouse.model.MemberDto;
 import com.ssafy.happyhouse.model.MemberException;
 import com.ssafy.happyhouse.model.PageBean2;
-import com.ssafy.happyhouse.model.dao.MemberDaoImpl;
+import com.ssafy.happyhouse.model.mapper.MemberDaoImpl;
 import com.ssafy.happyhouse.util.PageUtility;
 
 @Service

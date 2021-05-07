@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import com.ssafy.happyhouse.model.HouseDto;
 import com.ssafy.happyhouse.model.HouseException;
 import com.ssafy.happyhouse.model.PageBean;
-import com.ssafy.happyhouse.model.dao.HouseDaoImpl;
+import com.ssafy.happyhouse.model.mapper.HouseDaoImpl;
 import com.ssafy.happyhouse.util.DBUtil;
 import com.ssafy.happyhouse.util.PageUtility;
 
