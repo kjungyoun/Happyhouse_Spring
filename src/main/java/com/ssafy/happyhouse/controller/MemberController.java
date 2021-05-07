@@ -77,6 +77,7 @@ public class MemberController {
 	@RequestMapping(value = "/delete", method = RequestMethod.GET)
 	public String deleteMember(@RequestParam String userid, HttpSession session) throws Exception {
 		memberService.deleteMember(userid);
+		session.invalidate();
 		return "redirect:/";
 	}
 

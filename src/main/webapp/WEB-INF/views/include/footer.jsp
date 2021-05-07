@@ -11,7 +11,7 @@
             <div class="footer-info">
               <h3>HappyHouse</h3>
               <h5>ssafy 5th 서울 8반 </h5>
-              <h5>김정윤 이서영</h5>
+              <h5>김정윤 조혜민</h5>
             </div>
           </div>
 

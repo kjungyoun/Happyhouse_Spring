@@ -26,7 +26,7 @@
   	}
   	
   	function moveDelete() {
-  		document.location.href = "${root}/user/delete";
+  		document.location.href = "${root}/user/delete?userid=${userinfo.userid}";
   	}
   </script>
 </head>
@@ -69,7 +69,7 @@
         </table><hr>
         <div class="text-center">
           <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#updateModal">회원정보 수정</button>
-          <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#deleteModal">탈퇴</button>
+          <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">탈퇴</button>
         </div>
       </div>
     </section><!-- End About Section -->

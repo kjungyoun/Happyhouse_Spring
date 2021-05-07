@@ -27,7 +27,7 @@
           <div class="col-xl-6 col-lg-5 pt-5 pt-lg-0">
             <h3 data-aos="fade-up">About Happy House</h3>
             <p data-aos="fade-up">
-              SSAFY 5기 8반 김정윤 이서영 BackEnd Project 입니다.
+              SSAFY 5기 8반 김정윤 조혜민 BackEnd Project 입니다.
             </p>
             <div class="icon-box" data-aos="fade-up">
               <i class="bx bx-receipt"></i>
@@ -213,7 +213,7 @@
 
         <div class="section-title" data-aos="fade-up">
           <h2>Team</h2>
-          <p>서울 8반 7조 김정윤 이서영 입니다.</p>
+          <p>서울 8반 7조 김정윤 조혜민 입니다.</p>
         </div>
 
         <div class="row">
@@ -238,14 +238,14 @@
           
           <div class="col-xl-3 col-lg-3 col-md-3" data-aos="fade-up" data-aos-delay="100">
             <div class="member">
-              <img src="/assets/img/team/seoyoung.jpg" class="img-fluid" alt="">
+              <img src="/assets/img/team/hmin.jpg" class="img-fluid" alt="">
               <div class="member-info">
                 <div class="member-info-content">
-                  <h4>이서영</h4>
+                  <h4>조혜민</h4>
                 </div>
                 <div class="social">
-                  <a href="https://www.instagram.com/twowestzero/"><i class="icofont-facebook"></i></a>
-                  <a href="https://www.instagram.com/twowestzero/"><i class="icofont-instagram"></i></a>
+                  <a href="https://instagram.com/heyming_c"><i class="icofont-facebook"></i></a>
+                  <a href="https://instagram.com/heyming_c"><i class="icofont-instagram"></i></a>
                 </div>
               </div>
             </div>
