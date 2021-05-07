@@ -27,7 +27,7 @@
           <div class="col-xl-6 col-lg-5 pt-5 pt-lg-0">
             <h3 data-aos="fade-up">About Happy House</h3>
             <p data-aos="fade-up">
-              SSAFY 5기 8반 김정윤 조혜민 BackEnd Project 입니다.
+              SSAFY 5기 8반 김정윤 조혜민 SpringBoot Project 입니다.
             </p>
             <div class="icon-box" data-aos="fade-up">
               <i class="bx bx-receipt"></i>
