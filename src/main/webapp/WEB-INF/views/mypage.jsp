@@ -20,23 +20,17 @@
 			alert("이메일 입력!!!");
 			return;
 		} else {
-			document.getElementById("updateform").action = "${root}/main";
+			document.getElementById("updateform").action = "${root}/user/modify";
 			document.getElementById("updateform").submit();
 		}
   	}
   	
   	function moveDelete() {
-  		document.location.href = "${root}/main?action=delete";
+  		document.location.href = "${root}/user/delete";
   	}
   </script>
 </head>
 
-<c:if test="${userinfo eq null}">
-	<script>
-		alert("로그인이 필요한 페이지입니다.\n로그인 페이지로 이동합니다.");
-		location.href = "main";
-	</script>
-</c:if>
 <c:if test="${userinfo ne null}">
 <body>
   <jsp:include page="include/header.jsp"/>

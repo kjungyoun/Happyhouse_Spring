@@ -55,12 +55,28 @@ public class MemberController {
 	}
 	
 	//register
+	@RequestMapping(value = "/register", method = RequestMethod.POST)
+	public String registerMember(@RequestParam String userid, String userpwd, String username, String email, Model model) throws Exception {
+		MemberDto memberDto = new MemberDto(userid, userpwd, username, email);
+		memberService.registerMember(memberDto);
+		return "index";
+	}
 	
 	
 	// modify
+	@RequestMapping(value = "/modify", method = RequestMethod.POST)
+	public String modifyMember(@RequestParam String userid, String userpwd, String username, String email, Model model) throws Exception {
+		MemberDto memberDto = new MemberDto(userid, userpwd, username, email);
+		memberService.modifyMember(memberDto);
+		return "index";
+	}
 	
 	
 	// delete
-	
-	
+	@RequestMapping(value = "/delete", method = RequestMethod.POST)
+	public String deleteMember(@RequestParam String userid, HttpSession session) throws Exception {
+		memberService.deleteMember(userid);
+		return "redirect:/";
+	}
+
 }
