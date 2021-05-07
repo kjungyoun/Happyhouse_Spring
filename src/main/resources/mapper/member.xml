@@ -38,4 +38,8 @@
 		order by userid desc;
 	</select>
 	
+	<select id="totalCount"   parameterType="pageBean"  resultType="member"  >
+		select count(*) from member
+	</select>
+	
 </mapper>

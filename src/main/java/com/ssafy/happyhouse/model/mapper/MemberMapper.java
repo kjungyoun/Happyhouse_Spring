@@ -1,9 +1,7 @@
 package com.ssafy.happyhouse.model.mapper;
 
-import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
-import java.util.Map;
 
 import org.apache.ibatis.annotations.Mapper;
 
@@ -17,7 +15,7 @@ public interface MemberMapper {
 	void registerMember(MemberDto memberDto)throws SQLException;
 	
 //	로그인
-	MemberDto login(Map<String, String> map)throws SQLException;
+	MemberDto login(String userid, String userpwd)throws SQLException;
 	
 //	회원정보 수정을 위한 회원의 모든 정보 얻기
 	MemberDto getMember(String userid)throws SQLException;
@@ -29,8 +27,8 @@ public interface MemberMapper {
 	void deleteMember(String userid)throws SQLException;
 	
 //  회원 전체	
-	List<MemberDto> searchAll(Connection conn, PageBean bean)throws SQLException;
+	List<MemberDto> searchAll(PageBean bean)throws SQLException;
 	
-	int totalCount(Connection conn, PageBean bean) throws SQLException;
+	int totalCount(PageBean bean) throws SQLException;
 
 }

@@ -1,7 +1,5 @@
 package com.ssafy.happyhouse.controller;
 
-import java.util.Map;
-
 import javax.servlet.http.*;
 
 import org.slf4j.Logger;
@@ -30,15 +28,15 @@ public class MemberController {
 	}
 	
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String login(@RequestParam Map<String, String> map, Model model, HttpSession session, HttpServletResponse response) {
+	public String login(@RequestParam String userid, String userpwd, Model model, HttpSession session, HttpServletResponse response) {
 		try {
-			MemberDto memberDto = memberService.login(map);
+			MemberDto memberDto = memberService.login(userid, userpwd);
 			if(memberDto != null) {
 				session.setAttribute("userinfo", memberDto);
 				
 				Cookie cookie = new Cookie("ssafy_id", memberDto.getUserid());
 				cookie.setPath("/");
-				if("saveok".equals(map.get("idsave"))) {
+				if("saveok".equals("idsave")) {
 					cookie.setMaxAge(60 * 60 * 24 * 365 * 40);//40년간 저장.
 				} else {
 					cookie.setMaxAge(0);
