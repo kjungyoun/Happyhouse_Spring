@@ -4,7 +4,7 @@
 
 <mapper namespace="com.ssafy.guestbook.model.mapper.MemberMapper">
 
-	<insert id="registerMember" parameterType="MemberDto">
+	<insert id="registerMember" parameterType="memberDto">
 		insert into member (userid, userpwd, username, email)
 		values (#{userid}, #{userpwd}, #{username}, #{email})
 	</insert>
@@ -15,24 +15,24 @@
 		where userid = #{userid} and userpwd = #{userpwd}
 	</select>
 	
-	<select id="getMember" parameterType="String" resultType="memberDto">
+	<select id="getMember" parameterType="string" resultType="memberDto">
 		select userid, userpwd, username, email
 		from member
 		where userid = #{userid}
 	</select>
 	
-	<update id="modifyMember" parameterType="MemberDto">
+	<update id="modifyMember" parameterType="memberDto">
 		update member
 		set userpwd = #{userpwd}, username = #{username}, email = #{email}
 		where userid = #{userid}
 	</update>
 	
-	<delete id="deleteMember" parameterType="String">
+	<delete id="deleteMember" parameterType="string">
 		delete from member
 		where userid = #{userid}
 	</delete>
 
-	<select id="searchAll" resultType="memberDto">
+	<select id="searchAll" parameterType="pagebean" resultType="memberDto">
 		select userid, username, email
 		from member
 		order by userid desc;
