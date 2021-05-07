@@ -19,8 +19,9 @@ public class HouseController {
 	
 	
 	@GetMapping("/search")
-	public String mvsearch(@ModelAttribute PageBean bean, Model model)throws Exception {
-		model.addAttribute("list", houseService.searchHouse(bean) );
+	public String mvsearch(PageBean bean, Model model)throws Exception {
+		model.addAttribute("list", houseService.searchHouse(bean));
+		model.addAttribute("bean", bean);
 		return "houseinfo";
 	}
 	

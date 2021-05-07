@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.ssafy.guestbook.model.mapper.HouseMapper">
+<mapper namespace="com.ssafy.happyhouse.model.mapper.HouseMapper">
 
 	<!-- join을 위한 baseAddress resultMap -->
 	<resultMap type="baseAddr" id="baseMap">
@@ -31,13 +31,12 @@
 	
 	<!-- 검색어로 집 거래 정보 리스트 구하기 -->
 	<select id="searchHouse" parameterType="pageBean" resultMap="dealMap">
-		select * 
-		from housedeal a
+		select * from housedeal a
 		left join (select distinct city, dongcode, gugun from baseaddress) b
 		on a.code = b.dongcode
 		<where>
 			<if test="key != null and key != 'all' and word != null and word != ''">
-					${key} like concat('%',#{word},'%'}
+					${key} like concat('%',#{word},'%')
 			</if>
 		</where>
 		order by AptName desc limit #{startNo}, #{interval}
@@ -45,7 +44,7 @@
 	
 	<!-- 총 데이터 개수 구하기 -->
 	<select id="totalCount" parameterType="pageBean" resultType="int">
-		select count(*) as cnt form housedeal
+		select count(*) as cnt from housedeal
 		<where>
 			<if test="key != 'all' and key != null and word != null and word != ''">
 				${key} like concat('%',#{word},'%')

@@ -93,7 +93,7 @@
 									<h4>
 										<a href="${root}/house/search?key=AptName&word=${house.aptName}">${house.aptName} 아파트</a>
 									</h4>
-									<h6 class="media-heading" id="">지역 정보 : ${house.city} ${house.gugun} ${house.dong}</h6>
+									<h6 class="media-heading" id="">지역 정보 : ${house.base.city} ${house.base.gugun} ${house.dong}</h6>
 									<h6 class="media-heading" id="">아파트 지번 : ${house.jibun}</h6>
 									<h6 class="media-heading" id="">아파트 이름 : ${house.aptName} 아파트</h6>
 									<h6 class="media-heading" id="">거래 가격 (만) : ${house.dealAmount}</h6>
@@ -120,7 +120,7 @@
 									<h4>
 										<a href="${root}/house/search?key=dong&word=${house.dong}">${house.dong }</a>
 									</h4>
-									<h6 class="media-heading" id="">지역 정보 : ${house.city} ${house.gugun} ${house.dong}</h6>
+									<h6 class="media-heading" id="">지역 정보 : ${house.base.city} ${house.base.gugun} ${house.dong}</h6>
 									<h6 class="media-heading" id="">아파트 지번 : ${house.jibun}</h6>
 									<h6 class="media-heading" id="">아파트 이름 : ${house.aptName} 아파트</h6>
 									<h6 class="media-heading" id="">거래 가격 (만) : ${house.dealAmount}</h6>

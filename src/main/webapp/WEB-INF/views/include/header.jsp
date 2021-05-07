@@ -89,7 +89,7 @@
 	          <li><a id="" href="${root}/user/mypage" class="font-weight-bold">MyPage</a></li>
 	          <!-- 관리자가 로그인했을 때만 -->
 	          <c:if test="${userinfo.userid eq 'admin'}">
-	          	<li><a id="" href="${root}/user/list" class="font-weight-bold">Admin</a></li> 
+	          	<li><a id="" href="${root}/admin/list" class="font-weight-bold">Admin</a></li> 
 	          </c:if>
 		</c:if>
 

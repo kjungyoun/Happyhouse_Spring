@@ -25,6 +25,8 @@ public class PageBean {
 		setPageNo(pageNo);
 	}
 	public int getStartNo() {
+		if(pageNo == 0)
+			return 0;
 		return (pageNo -1)*interval;
 	}
 	public void setStartNo(int startNo) {

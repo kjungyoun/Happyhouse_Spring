@@ -36,7 +36,7 @@
 		select userid, username, email
 		from member
 		<where>
-			<if test="key != null and key != all and word != null and word != ''">
+			<if test="key != null and key != 'all' and word != null and word != ''">
 				${key} like concat('%',#{word},'%')
 			</if>
 		</where>
@@ -46,7 +46,7 @@
 	<select id="totalCount"   parameterType="pageBean"  resultType="int"  >
 		select count(*) from member
 		<where>
-			<if test="key != null and key != all and word != null and word != ''">
+			<if test="key != null and key != 'all' and word != null and word != ''">
 				${key} like concat('%',#{word},'%')
 			</if>
 		</where>

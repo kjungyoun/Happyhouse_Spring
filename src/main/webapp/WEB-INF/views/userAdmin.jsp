@@ -45,9 +45,8 @@
 		function pagelist(cpage){
 			//input 양식의 hidden으로 선언된 page에 요청된 페이지 정보 셋팅 
 			$("#pageNo").val(cpage);
-			$("#action").val("memberList");
 			var frm = $("#form");
-			frm.attr('action',"${root}/main");
+			frm.attr('action',"${root}/admin/list");
 			frm.submit();
 		}
 	  </script>
@@ -76,7 +75,6 @@
            
             <form id="form" class="form-inline" style="float : right">
             <input type="hidden" name="pageNo" id="pageNo">
-            <input type="hidden" name="action" id="action">
             <select class="form-control" id="key" name="key" style="width: 150px">
 							<option value="all">전체 검색</option>
 							<option value="userid">아이디로 검색</option>
@@ -98,12 +96,12 @@
                 </tr>
               </thead>
               <tbody>
-              <c:forEach var="mem" items="${members}">
+              <c:forEach var="mem" items="${members}" varStatus="num">
               	<tr>
                   <td>
                     <div class="custom-control custom-checkbox user-select">
                         <input type="checkbox" class="custom-control-input" id="customCheck1" checked>
-                        <label class="custom-control-label" for="customCheck1">#</label>
+                        <label class="custom-control-label" for="customCheck1">${num.count}.</label>
                     </div>
                   </td>
                   <td>${mem.userid}</td>
